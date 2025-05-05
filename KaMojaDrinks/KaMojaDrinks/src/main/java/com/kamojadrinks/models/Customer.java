@@ -1,25 +1,14 @@
 package com.kamojadrinks.models;
 
 public class Customer {
-    private String customerId;
     private String name;
-    private String phoneNumber;
+    private String customerID;
 
-    public Customer(String customerId, String name, String phoneNumber) {
-        this.customerId = customerId;
+    public Customer(String name, String customerID) {
         this.name = name;
-        this.phoneNumber = phoneNumber;
+        this.customerID = customerID;
     }
 
-    public String getCustomerId() {
-        return customerId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+    public String getName() { return name; }
+    public String getCustomerID() { return customerID; }
 }

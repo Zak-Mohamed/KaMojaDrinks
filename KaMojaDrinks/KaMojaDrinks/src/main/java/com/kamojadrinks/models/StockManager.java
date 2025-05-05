@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.kamojadrinks.models;
 
-/**
- *
- * @author zak
- */
+package com.kamojadrinks.models;
+import java.util.List;
+
 public class StockManager {
-    
+    public void checkLowStock(List<Drink> inventory) {
+        System.out.println("Checking for low stock...");
+        for (Drink drink : inventory) {
+            if (drink.isLowStock()) {
+                System.out.println("LOW STOCK ALERT: " + drink.getName() + " (" + drink.getStock() + " left)");
+            }
+        }
+    }
+
+    public void restockDrink(Drink drink, int quantity) {
+        System.out.println("Restocking " + drink.getName() + " by " + quantity + " units.");
+        drink.addStock(quantity);
+    }
+
+    public void restockAll(List<Drink> inventory, int threshold, int restockAmount) {
+        for (Drink drink : inventory) {
+            if (drink.getStock() < threshold) {
+                restockDrink(drink, restockAmount);
+            }
+        }
+    }
 }
+
+
+
