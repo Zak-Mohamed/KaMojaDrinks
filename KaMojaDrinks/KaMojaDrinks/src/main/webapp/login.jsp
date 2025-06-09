@@ -3,70 +3,54 @@
     Created on : Apr 26, 2025, 8:27:08 PM
     Author     : zak
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="ISO-8859-1">
-    <title>Login and Logout Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-   
-<title>Insert title here</title>
-
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding-top: 50px;
-        }
-        .form-login {
-            max-width: 330px;
-            padding: 15px;
-            margin: auto;
-        }
-        .form-login .form-control {
-            position: relative;
-            box-sizing: border-box;
-            height: auto;
-            padding: 10px;
-            font-size: 16px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Login - BeverageOrder</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <%-- Check if user is logged in --%>
-        <%
-            String username = (String) session.getAttribute("username");
-            if (username == null) {
-        %>
-        <!-- Login Form -->
-        <form class="form-login" method="post" action="login.jsp">
-            <h2 class="mb-3">Login</h2>
-            <% if (request.getParameter("error") != null) { %>
-                <div class="alert alert-danger" role="alert">
-                    Invalid username or password!
-                </div>
-            <% } %>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" class="form-control" required>
+    <div class="page-container">
+        <div class="main-content">
+            <div class="form-wrapper">
+                <%
+                    String username = (String) session.getAttribute("username");
+                    if (username == null) {
+                %>
+                <!-- Login Form -->
+                <form class="form-login" method="post" action="login.jsp">
+                    <h2 class="form-title">Sign In</h2>
+                    
+                    <% if (request.getParameter("error") != null) { %>
+                        <div class="alert">
+                            <p>❌ Invalid username or password</p>
+                        </div>
+                    <% } %>
+
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <p class="center-text">Don't have an account? <a href="registration.jsp">Register here</a></p>
+                <% } else { %>
+                <!-- Logged In View -->
+                <form class="form-login" method="post" action="logout.jsp">
+                    <h2 class="form-title">Welcome, <%= username %>!</h2>
+                    <button type="submit">Logout</button>
+                </form>
+                <% } %>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control" required>
-            </div>
-            <button class="btn btn-primary" type="submit">Sign in</button>
-        </form>
-        <% } else { %>
-        <!-- Logout Form -->
-        <form class="form-login" method="post" action="logout.jsp">
-            <h2 class="mb-3">Welcome, <%= username %>!</h2>
-            <button class="btn btn-primary" type="submit">Logout</button>
-        </form>
-        <% } %>
+        </div>
+
+        
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
