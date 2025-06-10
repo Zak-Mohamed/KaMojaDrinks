@@ -26,7 +26,7 @@
          <main class="main-content">
       <!-- Hero / Banner -->
       <section class="hero">
-    <img src="purplehero.png" alt="Hero Background">
+    <img src="images/purplehero.png" alt="Hero Background">
     <div class="hero-content">
         <h1>Quality refreshments for you</h1>
         <p>Quench your thirst with our wide array of drinks!</p>
@@ -34,25 +34,36 @@
     </div>
 </section>
 <section class="top-picks">
-    <h2>Top Picks</h2>
-    <div class="drink-grid">
-        <div class="drink-card">
-            <img src="trial.jpg" alt="Classic Cola">
-            <h3>Classic Cola</h3>
-            <p>The bold, fizzy favorite you know and love.</p>
-        </div>
-        <div class="drink-card">
-            <img src="images/lemon-tea.jpg" alt="Lemon Iced Tea">
-            <h3>Lemon Iced Tea</h3>
-            <p>Refreshing and lightly sweetened. Perfect on a hot day.</p>
-        </div>
-        <div class="drink-card">
-            <img src="images/cold-brew.jpg" alt="Cold Brew Coffee">
-            <h3>Cold Brew Coffee</h3>
-            <p>Strong, smooth, and ice-cold — a wake-up in a bottle.</p>
-        </div>
+  <h2>Top Picks</h2>
+  <div class="drink-grid">
+
+    <div class="drink-card">
+      <a href="shop.jsp" class="card-link">
+        <img src="images/cola.jpg" alt="Classic Cola">
+        <h3>Classic Cola</h3>
+        <p>The bold, fizzy favorite you know and love.</p>
+      </a>
     </div>
+
+    <div class="drink-card">
+      <a href="shop.jsp" class="card-link">
+        <img src="images/lemon-tea.jpg" alt="Lemon Iced Tea">
+        <h3>Lemon Iced Tea</h3>
+        <p>Refreshing and lightly sweetened. Perfect on a hot day.</p>
+      </a>
+    </div>
+
+    <div class="drink-card">
+      <a href="shop.jsp" class="card-link">
+        <img src="images/cold-brew.jpg" alt="Cold Brew Coffee">
+        <h3>Cold Brew Coffee</h3>
+        <p>Strong, smooth, and ice-cold — a wake-up in a bottle.</p>
+      </a>
+    </div>
+
+  </div>
 </section>
+
 <section class="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">

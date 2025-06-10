@@ -30,6 +30,8 @@
             <option value="Nairobi">
             <option value="Mombasa">
             <option value="Kisumu">
+            <option value="Nakuru">
+
         </datalist>
       <button type="submit">Sign Up</button>
     </form>
