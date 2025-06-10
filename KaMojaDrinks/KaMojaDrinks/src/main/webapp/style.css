@@ -229,6 +229,11 @@ footer .footer-links a:hover {
   transition: transform 0.2s ease;
 }
 
+.drink-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
 .drink-card img {
   width: 100%;
   height: 180px;
@@ -236,9 +241,13 @@ footer .footer-links a:hover {
   border-radius: 8px;
 }
 
-.drink-card:hover {
-  transform: scale(1.05);
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
+
+
 
 /* How It Works Section */
 .how-it-works {
@@ -314,4 +323,99 @@ footer .footer-links a:hover {
 .center-text a:hover {
   text-decoration: underline;
 }
+.cart-section {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.cart-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.cart-section ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.cart-section li {
+  margin-bottom: 10px;
+}
+
+#checkout-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Floating Cart Icon */
+#cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4B0082;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#cart-icon:hover {
+  background: #360062;
+}
+
+/* Cart Modal */
+#cart-modal {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.cart-content ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.cart-content li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
 
