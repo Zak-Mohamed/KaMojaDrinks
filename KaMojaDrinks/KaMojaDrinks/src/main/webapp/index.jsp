@@ -5,6 +5,16 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.util.Map" %>
+<%
+    Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cart");
+    int cartCount = 0;
+    if (cart != null) {
+        for (Integer qty : cart.values()) {
+            cartCount += qty;
+        }
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,11 +25,18 @@
    <body>
         <header>
             <nav>
-                <ul>
+                <ul style="display:flex;align-items:center;justify-content:center;gap:32px;list-style:none;padding:0;margin:0;">
                     <li class="left"><a class="active" href="index.jsp">Home</a></li>
                     <li><a href="#About">About us</a></li>
                     <li><a href="login.jsp">Login</a></li>
                     <li><a href="shop.jsp">Shop</a></li>
+                    <li>
+                      <a href="checkout.jsp" style="position:relative;">
+                        🛒 Cart <span style="background:#4B0082;color:#fff;border-radius:50%;padding:2px 8px;font-size:0.9em;position:relative;top:-2px;left:2px;">
+                          <%= cartCount %>
+                        </span>
+                      </a>
+                    </li>
                 </ul>   
             </nav>
         </header>

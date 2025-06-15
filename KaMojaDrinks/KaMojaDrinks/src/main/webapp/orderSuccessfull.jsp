@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Order Placed Successfully!</h1>
+        <p>Thank you for your order. Your drinks will be delivered soon.</p>
+        <a href="index.jsp">Return to Home</a>
     </body>
 </html>

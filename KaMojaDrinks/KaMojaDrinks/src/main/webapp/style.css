@@ -24,6 +24,15 @@ html, body {
 }
 
 /* Navigation bar */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ensures it stays on top of other elements */
+  background-color: white; /* make sure background is visible */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional for subtle depth */
+  
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -40,7 +49,7 @@ li {
 }
 
 li.left {
-  float: left;
+  margin-left:700px;
 }
 
 li a {
