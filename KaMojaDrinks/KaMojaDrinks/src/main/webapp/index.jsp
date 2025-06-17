@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li class="left"><a class="active" href="index.jsp">Home</a></li>
-                    <li><a href="#About">About us</a></li>
+                    <li><a href="about.jsp">About us</a></li>
                     <li><a href="login.jsp">Login</a></li>
                     <li><a href="shop.jsp">Shop</a></li>
                 </ul>   
@@ -81,7 +81,7 @@
       <p>&copy; 2025 KaMojaDrinks. All rights reserved.</p>
     </div>
     <div class="footer-links">
-      <a href="#About">About Us</a>
+      <a href="about.jsp">About Us</a>
       <span>|</span>
       <a href="#Contact">Contact</a>
       <span>|</span>
