@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseUtil {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/KaMojaDrinksDB";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/kamojadrinksdb";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "";
 

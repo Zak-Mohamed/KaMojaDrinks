@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-        <form action="submit-form.php" method="post">
+        <form action="register" method="post">
         <legend class="form-title">Sign Up</legend>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>

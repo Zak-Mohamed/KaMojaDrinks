@@ -4,49 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>About Us</title>
-  <style>
-    body, h1, h2, p, ul, li {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #E6E6FA;
-      color: #333;
-    }
-
-    .header {
-      background-color: #9370DB;
-      color: #fff;
-      padding: 10px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo img {
-      height: 50px;
-       width: 50px; 
-       border-radius: 50%;
-       object-fit: cover;
-    }
-
-    nav.menu a {
-      color: purple;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    nav.menu a:hover {
-      color: #1f1f1f;
-      background-color: #9370DB;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
 
     main.main {
       padding: 30px;
@@ -135,19 +93,6 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">
-      <a href="#">
-        <img src="images/logo.jpg" alt="Logo">
-      </a>
-    </div>
-    <nav class="menu">
-        <a href="index.jsp"><i class="fas fa-home"></i> Home</a>
-      <a href="login.jsp"><i class="fas fa-user"></i> Login</a>
-      <a href="shop.jsp"><i class="fas fa-shopping-cart"></i> Shop</a>
-      <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
-    </nav>
-  </header>
 
   <main class="main">
     <section id="mission-vision">
@@ -223,4 +168,4 @@
     &copy; 2025 KamojaDrinks. All rights reserved.
   </footer>
 </body>
-</html>
+
