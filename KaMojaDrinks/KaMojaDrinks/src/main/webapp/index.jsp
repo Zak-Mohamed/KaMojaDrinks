@@ -36,16 +36,6 @@ if (request.getAttribute("branches") == null) {
                 <ul style="display:flex;align-items:center;justify-content:center;gap:32px;list-style:none;padding:0;margin:0;">
                     <li class="left"><a class="active" href="index.jsp">Home</a></li>
                     <li><a href="about.jsp">About us</a></li>
-                    <% if (session.getAttribute("userName") != null) { %>
-                        <li><a href="shop.jsp">Shop</a></li>
-                        <li><a href="logout">Logout (<%= session.getAttribute("userName") %>)</a></li>
-                        <% if ("admin".equals(session.getAttribute("userRole"))) { %>
-                            <li><a href="admin/dashboard.jsp">Admin Dashboard</a></li>
-                        <% } %>
-                    <% } else { %>
-                        <li><a href="login.jsp">Login</a></li>
-                        <li><a href="shop.jsp">Shop</a></li>
-                    <% } %>
                     <li>
                       <a href="checkout.jsp" style="position:relative;">
                         🛒 Cart <span style="background:#4B0082;color:#fff;border-radius:50%;padding:2px 8px;font-size:0.9em;position:relative;top:-2px;left:2px;">
@@ -109,6 +99,7 @@ if (request.getAttribute("branches") == null) {
       <p>&copy; 2025 KaMojaDrinks. All rights reserved.</p>
     </div>
     <div class="footer-links">
+
       <a href="#Contact">Contact</a>
       <span>|</span>
       <a href="registration.jsp">Register</a>

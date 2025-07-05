@@ -4,8 +4,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>About Us</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
+
+
     main.main {
       padding: 30px;
     }
@@ -93,7 +93,7 @@
 </head>
 
 <body>
-  <jsp:include page="header.jsp" />
+
   <main class="main">
     <section id="mission-vision">
       <h2>Mission and Vision</h2>
@@ -168,4 +168,4 @@
     &copy; 2025 KamojaDrinks. All rights reserved.
   </footer>
 </body>
-</html>
+
