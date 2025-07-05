@@ -28,7 +28,6 @@
     <nav>
       <ul style="display:flex;align-items:center;justify-content:center;gap:32px;list-style:none;padding:0;margin:0;">
         <li class="left"><a href="index.jsp">Home</a></li>                 
-        <li><a href="#About">About us</a></li>
         <li><a href="login.jsp">Login</a></li>
         <li><a href="shop.jsp">Shop</a></li>
         <li>
@@ -56,6 +55,7 @@
             <thead>
               <tr style="background:#f3e6ff;color:#4B0082;">
                 <th style="padding:10px 6px;text-align:left;">#</th>
+                <th style="padding:10px 6px;text-align:left;">Branch</th>
                 <th style="padding:10px 6px;text-align:left;">Product</th>
                 <th style="padding:10px 6px;text-align:right;">Qty</th>
                 <th style="padding:10px 6px;text-align:right;">Price</th>
@@ -65,18 +65,22 @@
             <tbody>
             <% int i=1; int total=0;
                for (Map.Entry<String, Integer> entry : cart.entrySet()) {
-                  String name = entry.getKey();
+                  String key = entry.getKey();
                   int qty = entry.getValue();
+                  String[] parts = key.split(":", 2);
+                  String branchId = parts[0];
+                  String drinkName = parts[1];
                   int price = 0;
-                  if (name.equals("Classic Cola")) price = 199;
-                  else if (name.equals("Lemon Iced Tea")) price = 249;
-                  else if (name.equals("Cold Brew Coffee")) price = 299;
+                  if (drinkName.equals("Classic Cola")) price = 150;
+                  else if (drinkName.equals("Lemon Iced Tea")) price = 200;
+                  else if (drinkName.equals("Cold Brew Coffee")) price = 350;
                   int subtotal = qty * price;
                   total += subtotal;
             %>
               <tr style="border-bottom:1px solid #eee;">
                 <td style="padding:8px 6px;"><%= i++ %></td>
-                <td style="padding:8px 6px;"><%= name %></td>
+                <td style="padding:8px 6px;">Branch #<%= branchId %></td>
+                <td style="padding:8px 6px;"><%= drinkName %></td>
                 <td style="padding:8px 6px;text-align:right;"><%= qty %></td>
                 <td style="padding:8px 6px;text-align:right;">KES <%= price %></td>
                 <td style="padding:8px 6px;text-align:right;">KES <%= subtotal %></td>
@@ -85,7 +89,7 @@
             </tbody>
             <tfoot>
               <tr style="background:#f3e6ff;font-weight:bold;">
-                <td colspan="4" style="padding:10px 6px;text-align:right;">Total:</td>
+                <td colspan="5" style="padding:10px 6px;text-align:right;">Total:</td>
                 <td style="padding:10px 6px;text-align:right;color:#4B0082;">KES <%= total %></td>
               </tr>
             </tfoot>

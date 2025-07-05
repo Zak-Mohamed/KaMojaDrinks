@@ -22,14 +22,16 @@ public class CartServlet extends HttpServlet {
         }
         String action = request.getParameter("action");
         String drinkName = request.getParameter("drink");
+        String branchId = request.getParameter("branch_id");
+        String key = branchId + ":" + drinkName;
         if ("add".equals(action)) {
-            cart.put(drinkName, cart.getOrDefault(drinkName, 0) + 1);
+            cart.put(key, cart.getOrDefault(key, 0) + 1);
         } else if ("remove".equals(action)) {
-            cart.remove(drinkName);
+            cart.remove(key);
         }
         session.setAttribute("cart", cart);
         System.out.println("Cart contents after add: " + cart);
-        response.sendRedirect("shop.jsp");
+        response.sendRedirect("shop.jsp?branch_id=" + branchId);
     }
 
     @Override

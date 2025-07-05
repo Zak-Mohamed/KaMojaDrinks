@@ -4,7 +4,7 @@ public class User {
     private int id;
     private String name;
     private String email;
-    private String password; // Used for registration, not stored in DB
+    private String password; 
     private String county;
     private String role;
 

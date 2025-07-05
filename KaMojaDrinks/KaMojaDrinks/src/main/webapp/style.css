@@ -68,6 +68,14 @@ li a:hover {
   background-color: black;
 }
 
+nav ul {
+  background: black !important;
+}
+nav ul li a.active {
+  background: #4B0082 !important;
+  color: #fff !important;
+}
+
 /* Form styling */
 form {
   border: 2px solid #ccc;

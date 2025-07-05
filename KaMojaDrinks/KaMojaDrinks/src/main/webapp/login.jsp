@@ -1,7 +1,5 @@
 <%-- 
     Document   : login.jsp
-    Created on : Apr 26, 2025, 8:27:08 PM
-    Author     : zak
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,17 +19,22 @@
                     if (username == null) {
                 %>
                 <!-- Login Form -->
-                <form class="form-login" method="post" action="login.jsp">
+                <form class="form-login" method="post" action="login">
                     <h2 class="form-title">Sign In</h2>
                     
                     <% if (request.getParameter("error") != null) { %>
                         <div class="alert">
-                            <p>❌ Invalid username or password</p>
+                            <p>❌ Invalid email or password</p>
+                        </div>
+                    <% } %>
+                    <% if (request.getParameter("error") != null && request.getParameter("error").equals("login_required")) { %>
+                        <div class="alert">
+                            <p>❌ Please login to place an order</p>
                         </div>
                     <% } %>
 
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
@@ -42,7 +45,7 @@
                 <p class="center-text">Don't have an account? <a href="registration.jsp">Register here</a></p>
                 <% } else { %>
                 <!-- Logged In View -->
-                <form class="form-login" method="post" action="logout.jsp">
+                <form class="form-login" method="post" action="logout">
                     <h2 class="form-title">Welcome, <%= username %>!</h2>
                     <button type="submit">Logout</button>
                 </form>
